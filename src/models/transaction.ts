@@ -1,5 +1,5 @@
-import Ardk from 'ardk';
 import Arweave from 'arweave';
+import Blockweave from 'blockweave';
 import {
   GQLAmountInterface,
   GQLBlockInterface,
@@ -23,7 +23,7 @@ export default class ArdbTransaction implements GQLTransactionInterface {
   private _block: GQLBlockInterface;
   private _parent: { id: string };
 
-  private arweave: Arweave | Ardk;
+  private arweave: Arweave | Blockweave;
 
   // Getters
   public get id(): string {
@@ -81,7 +81,7 @@ export default class ArdbTransaction implements GQLTransactionInterface {
     return this._parent;
   }
 
-  constructor(obj: Partial<GQLTransactionInterface>, arweave: Arweave | Ardk) {
+  constructor(obj: Partial<GQLTransactionInterface>, arweave: Arweave | Blockweave) {
     this._id = obj.id;
     this._anchor = obj.anchor;
     this._signature = obj.signature;
