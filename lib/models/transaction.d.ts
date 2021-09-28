@@ -1,5 +1,4 @@
 import Arweave from 'arweave';
-import Blockweave from 'blockweave';
 import { GQLAmountInterface, GQLBlockInterface, GQLMetaDataInterface, GQLOwnerInterface, GQLTagInterface, GQLTransactionInterface } from '../faces/gql';
 export default class ArdbTransaction implements GQLTransactionInterface {
     private _id;
@@ -27,5 +26,5 @@ export default class ArdbTransaction implements GQLTransactionInterface {
     get parent(): {
         id: string;
     };
-    constructor(obj: Partial<GQLTransactionInterface>, arweave: Arweave | Blockweave);
+    constructor(obj: Partial<GQLTransactionInterface>, arweave: Arweave);
 }

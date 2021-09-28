@@ -1,5 +1,4 @@
 import Arweave from 'arweave';
-import Blockweave from 'blockweave';
 
 export enum LOGS {
   NO,
@@ -9,9 +8,9 @@ export enum LOGS {
 
 export class Log {
   private logs: LOGS = LOGS.ARWEAVE;
-  private arweave: Arweave | Blockweave;
+  private arweave: Arweave;
 
-  init(logLevel: LOGS = LOGS.ARWEAVE, arweave: Arweave | Blockweave) {
+  init(logLevel: LOGS = LOGS.ARWEAVE, arweave: Arweave) {
     this.logs = logLevel;
     this.arweave = arweave;
 

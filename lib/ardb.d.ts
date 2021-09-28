@@ -1,5 +1,4 @@
 import Arweave from 'arweave';
-import Blockweave from 'blockweave';
 import { fieldType } from './faces/fields';
 import { IGlobalOptions, RequestType } from './faces/options';
 import ArdbBlock from './models/block';
@@ -24,7 +23,7 @@ export default class ArDB {
      * @param arweave An arweave instance
      * @param logLevel Show logs. 0 = false, 1 = true, 2 = if arweave instance has log enabled.
      */
-    constructor(arweave: Arweave | Blockweave, logLevel?: LOGS);
+    constructor(arweave: Arweave, logLevel?: LOGS);
     /**
      * Get the current cursor (also known as `after`) in case you need to do extra manual work with it.
      * @returns cursor
